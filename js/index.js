@@ -40,3 +40,36 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+//navigation
+const nav = document.querySelector("nav");
+nav.querySelectorAll("a")[0].textContent = siteContent["nav"]["nav-item-1"];
+nav.querySelectorAll("a")[1].textContent = siteContent["nav"]["nav-item-2"];
+nav.querySelectorAll("a")[2].textContent = siteContent["nav"]["nav-item-3"];
+nav.querySelectorAll("a")[3].textContent = siteContent["nav"]["nav-item-4"];
+nav.querySelectorAll("a")[4].textContent = siteContent["nav"]["nav-item-5"];
+nav.querySelectorAll("a")[5].textContent = siteContent["nav"]["nav-item-6"];
+
+//middle images: DOM IS AWESOME
+const cta = document.querySelector(".cta-text");
+const h1 = cta.querySelector("h1");
+h1.textContent = siteContent.cta.h1;
+//button under DOM
+const button = cta.querySelector("button");
+button.textContent  = "Get Started";
+//Right img
+const ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
+
+//Main Content
+//Features
+const topContentFeatures = document.querySelectorAll(".text-content");
+const h4Features = topContentFeatures[0].querySelector("h4");
+h4Features.textContent = siteContent["main-content"]["features-h4"];
+const featuresContent = topContentFeatures[0].querySelector("p");
+featuresContent.textContent = siteContent["main-content"]["features-content"];
+//About
+const topContentAbout = document.querySelectorAll(".text-content");
+const h4About = topContentAbout[1].querySelector("h4");
+h4About.textContent = siteContent["main-content"]["about-h4"];
+const aboutContent = topContentFeatures[1].querySelector("p");
+aboutContent.textContent = siteContent["main-content"]["about-content"];
