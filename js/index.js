@@ -40,3 +40,99 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+//navigation
+const nav = document.querySelector("nav");
+nav.querySelectorAll("a")[0].textContent = siteContent["nav"]["nav-item-1"];
+nav.querySelectorAll("a")[1].textContent = siteContent["nav"]["nav-item-2"];
+nav.querySelectorAll("a")[2].textContent = siteContent["nav"]["nav-item-3"];
+nav.querySelectorAll("a")[3].textContent = siteContent["nav"]["nav-item-4"];
+nav.querySelectorAll("a")[4].textContent = siteContent["nav"]["nav-item-5"];
+nav.querySelectorAll("a")[5].textContent = siteContent["nav"]["nav-item-6"];
+
+const beginning = document.createElement("a");
+beginning.textContent = "beginning";
+nav.prepend(beginning);
+
+const end = document.createElement("a");
+end.textContent = "end";
+nav.appendChild(end);
+
+
+const anchors = nav.querySelectorAll("a");
+anchors[0].style.color = "green";
+anchors[1].style.color = "green";
+anchors[2].style.color = "green";
+anchors[3].style.color = "green";
+anchors[4].style.color = "green";
+anchors[5].style.color = "green";
+anchors[6].style.color = "green";
+anchors[7].style.color = "green";
+
+//middle images: DOM IS AWESOME
+
+
+const cta = document.querySelector(".cta-text");
+const h1 = cta.querySelector("h1");
+h1.textContent = siteContent.cta.h1;
+
+//button under DOM
+const button = cta.querySelector("button");
+button.textContent  = "Get Started";
+//Right img
+const ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
+
+//Main Content
+//Features
+const topContentFeatures = document.querySelectorAll(".text-content");
+const h4Features = topContentFeatures[0].querySelector("h4");
+h4Features.textContent = siteContent["main-content"]["features-h4"];
+const featuresContent = topContentFeatures[0].querySelector("p");
+featuresContent.textContent = siteContent["main-content"]["features-content"];
+
+//About
+const topContentAbout = document.querySelectorAll(".text-content");
+const h4About = topContentFeatures[1].querySelector("h4");
+h4About.textContent = siteContent["main-content"]["about-h4"];
+const aboutContent = topContentFeatures[1].querySelector("p");
+aboutContent.textContent = siteContent["main-content"]["about-content"];
+
+//Middle Img
+const middleImg = document.getElementById("middle-img");
+middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+//Bottom Content
+//Services
+const bottomContentServices = document.querySelectorAll(".text-content");
+const h4Services = topContentFeatures[2].querySelector("h4");
+h4Services.textContent = siteContent["main-content"]["services-h4"];
+const servicesContent = topContentFeatures[2].querySelector("p");
+servicesContent.textContent = siteContent["main-content"]["services-content"];
+
+//Product
+const bottomContentProduct = document.querySelectorAll(".text-content");
+const h4Product = topContentFeatures[3].querySelector("h4");
+h4Product.textContent = siteContent["main-content"]["product-h4"];
+const productContent = topContentFeatures[3].querySelector("p");
+productContent.textContent = siteContent["main-content"]["product-content"];
+//Vision
+const bottomContentVision = document.querySelectorAll(".text-content");
+const h4Vision = topContentFeatures[4].querySelector("h4");
+h4Vision.textContent = siteContent["main-content"]["vision-h4"];
+const visionContent = topContentFeatures[4].querySelector("p");
+visionContent.textContent = siteContent["main-content"]["vision-content"];
+
+//Contact
+const contact = document.querySelector(".contact");
+const h4Contact = contact.querySelector("h4");
+h4Contact.textContent = siteContent["contact"]["contact-h4"];
+
+const address = document.querySelectorAll(".contact p")[0];
+address.textContent = siteContent.contact.address;
+const phone = document.querySelectorAll(".contact p")[1];
+phone.textContent = siteContent.contact.phone;
+const email = document.querySelectorAll(".contact p")[2];
+email.textContent = siteContent.contact.email;
+
+const copyright = document.querySelector("footer");
+copyright.textContent = siteContent.footer.copyright;
