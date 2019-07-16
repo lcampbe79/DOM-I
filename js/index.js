@@ -40,33 +40,28 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
-//navigation
-const nav = document.querySelector("nav");
-nav.querySelectorAll("a")[0].textContent = siteContent["nav"]["nav-item-1"];
-nav.querySelectorAll("a")[1].textContent = siteContent["nav"]["nav-item-2"];
-nav.querySelectorAll("a")[2].textContent = siteContent["nav"]["nav-item-3"];
-nav.querySelectorAll("a")[3].textContent = siteContent["nav"]["nav-item-4"];
-nav.querySelectorAll("a")[4].textContent = siteContent["nav"]["nav-item-5"];
-nav.querySelectorAll("a")[5].textContent = siteContent["nav"]["nav-item-6"];
 
+//navigation
+const navLinks = document.querySelectorAll("nav a");
+navLinks.forEach((navLink, i) => {
+  navLink.textContent = siteContent["nav"][`nav-item-${i+1}`];
+});
+
+const nav = document.querySelector("nav");
 const beginning = document.createElement("a");
-beginning.textContent = "beginning";
+beginning.textContent = "Beginning";
 nav.prepend(beginning);
 
 const end = document.createElement("a");
-end.textContent = "end";
+end.textContent = "End";
 nav.appendChild(end);
 
 
-const anchors = nav.querySelectorAll("a");
-anchors[0].style.color = "green";
-anchors[1].style.color = "green";
-anchors[2].style.color = "green";
-anchors[3].style.color = "green";
-anchors[4].style.color = "green";
-anchors[5].style.color = "green";
-anchors[6].style.color = "green";
-anchors[7].style.color = "green";
+const anchors = document.querySelectorAll("nav a");
+anchors.forEach((anchor) => {
+  anchor.style.color = "green";
+});
+
 
 //middle images: DOM IS AWESOME
 
